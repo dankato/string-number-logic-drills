@@ -75,7 +75,10 @@ howManyDays("February");
 // Rock Paper Scissors
 
 function rockPaperScissors(userChoice) {
-    var computer = ['rock', 'paper', 'scissor'][Math.floor((Math.random()*3))]; // why 2 arrays and block?
+    const choices = ['rock', 'paper', 'scissor'];
+    const num = Math.floor((Math.random()*3));
+    var computer = choices[num]; // why 2 arrays and block?
+    // ['rock', 'paper', 'scissors'][0]
     if (computer === "rock") {
         switch(userChoice) {
             case "paper" :
