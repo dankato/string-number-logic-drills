@@ -43,3 +43,78 @@ function breakup(sentance) {
 breakup('craft block argon meter bells brown croon droop');
 
 // 
+
+//How many days in a month?
+
+function howManyDays(month) {
+    switch (month) {
+        case "January" :
+        case "March" :
+        case "May" :
+        case "July" :
+        case "August" :
+        case "October" :
+        case "December" :
+        console.log(`${month} has 31 days.`);
+        break;
+
+        case "April" :
+        case "June" :
+        case "September" :
+        case "November" :
+        console.log(`${month} has 30 days.`);
+        break;
+
+        case "February" :
+        console.log(`${month} has 28 days.`);
+    }
+}
+
+howManyDays("February");
+
+// Rock Paper Scissors
+
+function rockPaperScissors(userChoice) {
+    var computer = ['rock', 'paper', 'scissor'][Math.floor((Math.random()*3))]; // why 2 arrays and block?
+    if (computer === "rock") {
+        switch(userChoice) {
+            case "paper" :
+                return "Paper beat rocks";
+            case "scissor" :
+                return "Rock beats scissors";
+            case "rock" :
+                return "tie";
+        }
+    }
+    else if (computer === "paper") {
+        switch(userChoice) {
+            case "rock" :
+                return "Paper beats rock";
+            case "scissor" :
+                return "Scissor beats paper";
+            case "paper" :
+                return "tie";
+        }
+    }
+    else if (computer === "scissor") {
+        switch(userChoice) {
+            case "rock" :
+                return "Rock beats scissor";
+            case "paper" :
+                return "Scissor beats paper";
+            case "scissor" :
+                return "tie";
+        }
+    }
+}
+
+rockPaperScissors("rock");
+
+
+
+
+
+
+
+
+
